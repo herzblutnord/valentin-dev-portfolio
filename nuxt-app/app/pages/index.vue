@@ -213,49 +213,48 @@ const projects = computed(() => [
   {
     title: lang.value === 'en' ? 'Verhåårm administration system' : 'Verhåårm Verwaltungssystem',
     subtitle:
-      lang.value === 'en'
-        ? 'Custom administration system with Spring Boot backend and Flutter frontend.'
-        : 'Eigenes Verwaltungssystem mit Spring-Boot-Backend und Flutter-Frontend.',
+        lang.value === 'en'
+            ? 'Custom administration system with Spring Boot backend and Flutter frontend.'
+            : 'Eigenes Verwaltungssystem mit Spring-Boot-Backend und Flutter-Frontend.',
     image: '/img/project-verhaarm.svg',
     tags: ['Java', 'Spring Boot', 'Flutter', 'PostgreSQL', 'JWT', 'Flyway'],
     details:
-      lang.value === 'en'
-        ? ['REST API and database-backed workflows', 'Flutter app for Android and web', 'Authentication, roles, deployments, and maintenance']
-        : ['REST API und datenbankgestützte Workflows', 'Flutter-App für Android und Web', 'Authentifizierung, Rollen, Deployments und Wartung'],
+        lang.value === 'en'
+            ? ['REST API and database-backed workflows', 'Flutter app for Android and web', 'Authentication, roles, deployments, and maintenance']
+            : ['REST API und datenbankgestützte Workflows', 'Flutter-App für Android und Web', 'Authentifizierung, Rollen, Deployments und Wartung'],
     url: githubUrl
   },
   {
     title: lang.value === 'en' ? 'Self-hosted VPS infrastructure' : 'Self-hosted VPS-Infrastruktur',
     subtitle:
-      lang.value === 'en'
-        ? 'Linux-based services for communication, collaboration, streaming, and web hosting.'
-        : 'Linux-basierte Dienste für Kommunikation, Zusammenarbeit, Streaming und Webhosting.',
+        lang.value === 'en'
+            ? 'Linux-based services for communication, collaboration, streaming, and web hosting.'
+            : 'Linux-basierte Dienste für Kommunikation, Zusammenarbeit, Streaming und Webhosting.',
     image: '/img/project-vps.svg',
     tags: ['Ubuntu', 'nginx', 'systemd', 'WireGuard', 'Fail2Ban', 'Certbot'],
     details:
-      lang.value === 'en'
-        ? ['Reverse proxy and TLS setup', 'Secure SSH access and firewall rules', 'Service operations, updates, and troubleshooting']
-        : ['Reverse Proxy und TLS-Setup', 'Sicherer SSH-Zugriff und Firewall-Regeln', 'Servicebetrieb, Updates und Troubleshooting'],
+        lang.value === 'en'
+            ? ['Reverse proxy and TLS setup', 'Secure SSH access and firewall rules', 'Service operations, updates, and troubleshooting']
+            : ['Reverse Proxy und TLS-Setup', 'Sicherer SSH-Zugriff und Firewall-Regeln', 'Servicebetrieb, Updates und Troubleshooting'],
     url: githubUrl
   },
   {
     title: lang.value === 'en' ? 'Java and Flutter projects' : 'Java- und Flutter-Projekte',
     subtitle:
-      lang.value === 'en'
-        ? 'Smaller tools, app features, experiments, and university-related work.'
-        : 'Kleinere Tools, App-Features, Experimente und studienbezogene Arbeiten.',
+        lang.value === 'en'
+            ? 'Smaller tools, app features, experiments, and university-related work.'
+            : 'Kleinere Tools, App-Features, Experimente und studienbezogene Arbeiten.',
     image: '/img/project-github.svg',
     tags: ['Java', 'Flutter', 'Dart', 'Git', 'GitHub', 'Linux'],
     details:
-      lang.value === 'en'
-        ? ['Readable READMEs and documented setup steps', 'Code cleanup for public application portfolio', 'Practical focus over demo-only code']
-        : ['Lesbare READMEs und dokumentierte Setup-Schritte', 'Code-Cleanup für ein öffentliches Bewerbungsportfolio', 'Praktischer Fokus statt reiner Demo-Code'],
+        lang.value === 'en'
+            ? ['Readable READMEs and documented setup steps', 'Code cleanup for public application portfolio', 'Practical focus over demo-only code']
+            : ['Lesbare READMEs und dokumentierte Setup-Schritte', 'Code-Cleanup für ein öffentliches Bewerbungsportfolio', 'Praktischer Fokus statt reiner Demo-Code'],
     url: githubUrl
   }
 ])
 
 const t = computed(() => content[lang.value])
-const resumeHref = computed(() => (lang.value === 'de' ? '/files/lebenslauf-de.pdf' : '/files/resume-en.pdf'))
 
 const setLanguage = (next: 'en' | 'de') => {
   lang.value = next
@@ -278,16 +277,16 @@ useHead(() => ({
     lang: lang.value
   },
   title:
-    lang.value === 'en'
-      ? 'Valentin Schecklein - Software Developer'
-      : 'Valentin Schecklein - Softwareentwickler',
+      lang.value === 'en'
+          ? 'Valentin Schecklein - Software Developer'
+          : 'Valentin Schecklein - Softwareentwickler',
   meta: [
     {
       name: 'description',
       content:
-        lang.value === 'en'
-          ? 'Portfolio of Valentin Schecklein, computer science student at DHBW Karlsruhe focusing Java backend, Flutter apps, and Linux infrastructure.'
-          : 'Portfolio von Valentin Schecklein, Wirtschaftsinformatik-Student an der DHBW Karlsruhe mit Fokus auf Java-Backend, Flutter-Apps und Linux-Infrastruktur.'
+          lang.value === 'en'
+              ? 'Portfolio of Valentin Schecklein, computer science student at DHBW Karlsruhe focusing Java backend, Flutter apps, and Linux infrastructure.'
+              : 'Portfolio von Valentin Schecklein, Wirtschaftsinformatik-Student an der DHBW Karlsruhe mit Fokus auf Java-Backend, Flutter-Apps und Linux-Infrastruktur.'
     }
   ]
 }))
@@ -324,11 +323,13 @@ useHead(() => ({
 
     <section id="top" class="hero-card panel-light" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">{{ t.hero.eyebrow }}</p>
+        <p class="hero-eyebrow">{{ t.hero.eyebrow }}</p>
+
         <h1 id="hero-title" class="pixel hero-title">
           <span>{{ t.hero.name }}</span>
           <span>{{ t.hero.role }}</span>
         </h1>
+
         <p class="hero-line">{{ t.hero.line }}</p>
       </div>
 
@@ -338,13 +339,15 @@ useHead(() => ({
         <a :href="`mailto:${contactEmail}`">Email</a>
       </div>
 
-      <p class="hero-location">{{ t.hero.based }}</p>
-      <p class="hero-status">{{ t.hero.status }}</p>
+      <div class="hero-meta">
+        <p class="hero-location">{{ t.hero.based }}</p>
+        <p class="hero-status">{{ t.hero.status }}</p>
+      </div>
 
       <img
-        class="hero-portrait"
-        src="/img/smoking4.png"
-        alt="Placeholder portrait. Replace with a transparent photo of Valentin Schecklein."
+          class="hero-portrait"
+          src="/img/smoking2.png"
+          alt="Portrait of Valentin Schecklein."
       >
 
       <div class="hero-bottom">
@@ -353,7 +356,7 @@ useHead(() => ({
           <span aria-hidden="true">↓</span>
         </a>
 
-        <a class="button button-dark" :href="resumeHref" download>
+        <a class="button button-dark" href="/files/resume-en.pdf" download>
           {{ t.hero.resume }}
           <span aria-hidden="true">↓</span>
         </a>
@@ -396,10 +399,10 @@ useHead(() => ({
 
       <div class="project-list">
         <article
-          v-for="(project, index) in projects"
-          :key="project.title"
-          class="project-row"
-          :class="{ open: activeProject === index }"
+            v-for="(project, index) in projects"
+            :key="project.title"
+            class="project-row"
+            :class="{ open: activeProject === index }"
         >
           <button class="project-trigger" type="button" @click="activeProject = index">
             <span>{{ index + 1 }}.</span>
