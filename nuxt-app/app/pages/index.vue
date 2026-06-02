@@ -213,23 +213,23 @@ const projects = computed(() => [
     title: 'Verhåårm',
     subtitle:
         lang.value === 'en'
-            ? 'A full-stack administration app built for one specific club, with a Java and Spring Boot backend and a Flutter frontend for Android and web.'
-            : 'Eine Full-Stack-Verwaltungsanwendung für einen bestimmten Verein, mit Java- und Spring-Boot-Backend sowie Flutter-Frontend für Android und Web.',
+            ? 'Club administration app with a Spring Boot backend and Flutter frontend.'
+            : 'Vereinsverwaltung mit Spring-Boot-Backend und Flutter-Frontend.',
     image: '/img/project-verhaarm.svg',
     tags: ['Java', 'Spring Boot', 'Flutter', 'PostgreSQL', 'JWT', 'Firebase', 'Flyway', 'nginx'],
     details:
         lang.value === 'en'
             ? [
-              'JWT authentication with access and refresh tokens, role-based permissions, and audit logging',
-              'Push notifications via Firebase Cloud Messaging and Web Push for Android and PWA clients',
-              'Flutter frontend with GoRouter, reactive state management, camera upload, and PDF handling',
-              'Deployed on a VPS behind nginx with systemd, PostgreSQL with Flyway migrations'
+              'JWT auth with access/refresh tokens, roles, and audit logging',
+              'Push notifications via Firebase and Web Push',
+              'Flutter: GoRouter, reactive state, camera upload, PDF handling',
+              'VPS deployment with nginx, systemd, PostgreSQL, and Flyway'
             ]
             : [
-              'JWT-Authentifizierung mit Access- und Refresh-Tokens, rollenbasierte Berechtigungen und Audit-Logging',
-              'Push-Benachrichtigungen über Firebase Cloud Messaging und Web Push für Android und PWA',
-              'Flutter-Frontend mit GoRouter, reaktivem State Management, Kamera-Upload und PDF-Handling',
-              'Deployment auf einem VPS hinter nginx mit systemd, PostgreSQL mit Flyway-Migrationen'
+              'JWT-Auth mit Access/Refresh-Tokens, Rollen und Audit-Logging',
+              'Push-Benachrichtigungen via Firebase und Web Push',
+              'Flutter: GoRouter, reaktiver State, Kamera-Upload, PDF-Handling',
+              'VPS-Deployment mit nginx, systemd, PostgreSQL und Flyway'
             ],
     links: [
       {
@@ -246,21 +246,21 @@ const projects = computed(() => [
     title: lang.value === 'en' ? 'Personal server infrastructure' : 'Eigene Serverinfrastruktur',
     subtitle:
         lang.value === 'en'
-            ? 'A self-hosted Ubuntu server running a mix of public and private services, which I manage and maintain myself.'
-            : 'Ein selbst gehosteter Ubuntu-Server mit verschiedenen öffentlichen und privaten Diensten, den ich selbst betreibe und warte.',
+            ? 'Self-hosted Ubuntu server for public and private services.'
+            : 'Selbst gehosteter Ubuntu-Server für öffentliche und private Dienste.',
     image: '/img/project-vps.svg',
     tags: ['Linux', 'Ubuntu', 'nginx', 'systemd', 'WireGuard', 'Fail2Ban', 'Certbot'],
     details:
         lang.value === 'en'
             ? [
-              'nginx as reverse proxy with TLS, serving several websites and web apps',
-              'Self-hosted services including a kanban planner, a streaming platform, and other internal tools',
-              'SSH hardening, Fail2Ban, WireGuard, firewall rules, and regular backups and maintenance'
+              'nginx reverse proxy with TLS for websites and web apps',
+              'Self-hosted kanban, streaming, and internal tools',
+              'SSH hardening, Fail2Ban, WireGuard, firewall, backups'
             ]
             : [
-              'nginx als Reverse Proxy mit TLS, hinter dem mehrere Websites und Web-Apps laufen',
-              'Selbst gehostete Dienste wie ein Kanban-Planner, eine Streaming-Plattform und weitere interne Tools',
-              'SSH-Härtung, Fail2Ban, WireGuard, Firewall-Regeln sowie regelmäßige Backups und Wartung'
+              'nginx als Reverse Proxy mit TLS für Websites und Web-Apps',
+              'Self-hosted Kanban, Streaming und interne Tools',
+              'SSH-Härtung, Fail2Ban, WireGuard, Firewall, Backups'
             ],
     links: []
   }
@@ -460,17 +460,19 @@ useHead(() => ({
               <div class="tag-row">
                 <span v-for="tag in project.tags" :key="tag">{{ tag }}</span>
               </div>
-              <a
-                  v-for="link in project.links"
-                  :key="link.url"
-                  class="button button-light"
-                  :href="link.url"
-                  target="_blank"
-                  rel="noreferrer"
-              >
-                {{ link.label }}
-                <span aria-hidden="true">↗</span>
-              </a>
+              <div v-if="project.links.length" class="project-links">
+                <a
+                    v-for="link in project.links"
+                    :key="link.url"
+                    class="button button-light"
+                    :href="link.url"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                  {{ link.label }}
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </div>
 
             <img class="project-image" :src="project.image" :alt="project.title">

@@ -463,6 +463,12 @@ img {
   background: var(--light-text);
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .profile-stats {
   display: grid;
   grid-column: 1 / -1;
