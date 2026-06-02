@@ -4,6 +4,7 @@ const activeProject = ref(0)
 const openFaq = ref(0)
 
 const githubUrl = 'https://github.com/herzblutnord'
+const linkedinUrl = 'https://www.linkedin.com/in/valentin-s-a8951816b/'
 const contactEmail = 'v.schecklein@proton.me'
 
 const content = {
@@ -103,7 +104,7 @@ const content = {
       text: 'Finishing my degree and looking for my first full-time role. If my profile looks like a fit, get in touch.',
       email: 'Email',
       github: 'GitHub',
-      linkedin: 'LinkedIn placeholder'
+      linkedin: 'LinkedIn'
     }
   },
   de: {
@@ -202,7 +203,7 @@ const content = {
       text: 'Ich schließe mein Studium ab und suche meine erste Vollzeitstelle. Wenn mein Profil passt, meld dich.',
       email: 'E-Mail',
       github: 'GitHub',
-      linkedin: 'LinkedIn Platzhalter'
+      linkedin: 'LinkedIn'
     }
   }
 }
@@ -327,7 +328,7 @@ useHead(() => ({
 
       <div class="hero-links" aria-label="Profile links">
         <a :href="githubUrl" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a :href="linkedinUrl" target="_blank" rel="noreferrer">LinkedIn</a>
         <a :href="`mailto:${contactEmail}`">Email</a>
       </div>
 
@@ -482,7 +483,7 @@ useHead(() => ({
       <div class="footer-links">
         <a :href="`mailto:${contactEmail}`">{{ t.contact.email }}</a>
         <a :href="githubUrl" target="_blank" rel="noreferrer">{{ t.contact.github }}</a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">{{ t.contact.linkedin }}</a>
+        <a :href="linkedinUrl" target="_blank" rel="noreferrer">{{ t.contact.linkedin }}</a>
       </div>
     </footer>
   </main>
