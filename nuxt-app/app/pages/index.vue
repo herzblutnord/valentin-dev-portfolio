@@ -4,7 +4,7 @@ const activeProject = ref(0)
 const openFaq = ref(0)
 
 const githubUrl = 'https://github.com/herzblutnord'
-const contactEmail = 'hello@valentin.dev'
+const contactEmail = 'v.schecklein@proton.me'
 
 const content = {
   en: {
@@ -20,17 +20,16 @@ const content = {
       eyebrow: 'Computer Science student at DHBW Karlsruhe',
       name: 'VALENTIN SCHECKLEIN',
       role: 'SOFTWARE DEVELOPER',
-      line: 'Java backend, Flutter apps, and Linux infrastructure.',
       based: 'Based in Germany',
       status: 'Graduating soon. Open to full-time roles.',
       resume: 'Download CV',
       scroll: 'Keep scrolling'
     },
     about: {
-      heading: 'HELLO! I AM VALENTIN.',
-      subheading: 'A PRACTICAL SOFTWARE DEVELOPER',
+      heading: 'VALENTIN SCHECKLEIN',
+      subheading: 'SOFTWARE DEVELOPER WITH PRACTICAL FOCUS',
       location: 'Based near Karlsruhe, Germany',
-      storyTitle: 'My story',
+      storyTitle: 'Profile',
       paragraphs: [
         'I am finishing my computer science degree at DHBW Karlsruhe and focus on practical software work: backend services, mobile and web apps, databases, authentication, deployment, and Linux-based infrastructure.',
         'My strongest areas are Java and Spring Boot, Flutter and Dart, PostgreSQL, REST APIs, nginx, systemd, Git workflows, and secure VPS operations. I like systems that are understandable, maintainable, and useful in daily work.'
@@ -120,17 +119,16 @@ const content = {
       eyebrow: 'Wirtschaftsinformatik-Student an der DHBW Karlsruhe',
       name: 'VALENTIN SCHECKLEIN',
       role: 'SOFTWARE DEVELOPER',
-      line: 'Java-Backend, Flutter-Apps und Linux-Infrastruktur.',
       based: 'Aus Deutschland',
       status: 'Bald mit dem Studium fertig. Offen für Vollzeitstellen.',
       resume: 'Lebenslauf laden',
       scroll: 'Weiter scrollen'
     },
     about: {
-      heading: 'HALLO! ICH BIN VALENTIN.',
+      heading: 'VALENTIN SCHECKLEIN',
       subheading: 'SOFTWAREENTWICKLER MIT PRAXISFOKUS',
       location: 'Aus der Nähe von Karlsruhe',
-      storyTitle: 'Mein Profil',
+      storyTitle: 'Profil',
       paragraphs: [
         'Ich schließe bald mein Studium der Wirtschaftsinformatik an der DHBW Karlsruhe ab. Mein Fokus liegt auf praktischer Softwareentwicklung: Backend-Services, mobile und Web-Apps, Datenbanken, Authentifizierung, Deployment und Linux-basierte Infrastruktur.',
         'Meine stärksten Bereiche sind Java und Spring Boot, Flutter und Dart, PostgreSQL, REST APIs, nginx, systemd, Git-Workflows und der sichere Betrieb eines VPS. Ich mag Systeme, die verständlich, wartbar und im Alltag nützlich sind.'
@@ -285,8 +283,8 @@ useHead(() => ({
       name: 'description',
       content:
           lang.value === 'en'
-              ? 'Portfolio of Valentin Schecklein, computer science student at DHBW Karlsruhe focusing Java backend, Flutter apps, and Linux infrastructure.'
-              : 'Portfolio von Valentin Schecklein, Wirtschaftsinformatik-Student an der DHBW Karlsruhe mit Fokus auf Java-Backend, Flutter-Apps und Linux-Infrastruktur.'
+              ? 'Portfolio of Valentin Schecklein, computer science student at DHBW Karlsruhe and software developer.'
+              : 'Portfolio von Valentin Schecklein, Wirtschaftsinformatik-Student an der DHBW Karlsruhe und Softwareentwickler.'
     }
   ]
 }))
@@ -329,8 +327,6 @@ useHead(() => ({
           <span>{{ t.hero.name }}</span>
           <span>{{ t.hero.role }}</span>
         </h1>
-
-        <p class="hero-line">{{ t.hero.line }}</p>
       </div>
 
       <div class="hero-links" aria-label="Profile links">
@@ -346,7 +342,7 @@ useHead(() => ({
 
       <img
           class="hero-portrait"
-          src="/img/smoking2.png"
+          src="/img/smoking4.png"
           alt="Portrait of Valentin Schecklein."
       >
 
@@ -363,28 +359,50 @@ useHead(() => ({
       </div>
     </section>
 
-    <section id="about" class="about-section section-space" aria-labelledby="about-title">
-      <div class="about-heading">
-        <h2 id="about-title" class="pixel section-title">
-          {{ t.about.heading }}
+    <section id="about" class="profile-intro panel-light" aria-labelledby="profile-title">
+      <div class="profile-copy">
+        <p class="profile-eyebrow">{{ t.hero.eyebrow }}</p>
+
+        <h1 id="profile-title" class="pixel profile-title">
+          <span>{{ t.about.heading }}</span>
           <span>{{ t.about.subheading }}</span>
-        </h2>
-        <p>{{ t.about.location }}</p>
-      </div>
+        </h1>
 
-      <div class="about-grid">
-        <article class="story-card">
-          <h3>{{ t.about.storyTitle }}</h3>
-          <p v-for="paragraph in t.about.paragraphs" :key="paragraph">{{ paragraph }}</p>
-        </article>
+        <p class="profile-location">{{ t.about.location }}</p>
 
-        <div class="portrait-card" aria-hidden="true">
-          <img src="/img/smoking4.png" alt="">
+        <div class="profile-text">
+          <p v-for="paragraph in t.about.paragraphs" :key="paragraph">
+            {{ paragraph }}
+          </p>
+        </div>
+
+        <div class="profile-actions">
+          <a class="button button-dark" :href="githubUrl" target="_blank" rel="noreferrer">
+            GitHub
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="button button-outline" :href="`mailto:${contactEmail}`">
+            Email
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="button button-outline" href="/files/resume-en.pdf" download>
+            {{ t.hero.resume }}
+            <span aria-hidden="true">↓</span>
+          </a>
         </div>
       </div>
 
-      <div class="stat-strip" aria-label="Profile highlights">
-        <div v-for="stat in t.about.stats" :key="stat.label" class="stat-item">
+      <div class="profile-visual" aria-hidden="true">
+        <div class="profile-visual-label">
+          {{ t.hero.role }}
+        </div>
+        <img src="/img/smoking4.png" alt="">
+      </div>
+
+      <div class="profile-stats" aria-label="Profile highlights">
+        <div v-for="stat in t.about.stats" :key="stat.label" class="profile-stat">
           <strong class="pixel">{{ stat.value }}</strong>
           <span>{{ stat.label }}</span>
         </div>
