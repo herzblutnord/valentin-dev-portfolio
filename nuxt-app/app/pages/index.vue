@@ -398,7 +398,7 @@ useHead(() => ({
         <div class="profile-visual-label">
           {{ t.hero.role }}
         </div>
-        <img src="/img/smoking4.png" alt="">
+        <img src="/img/profilbild2.png" alt="">
       </div>
 
       <div class="profile-stats" aria-label="Profile highlights">
