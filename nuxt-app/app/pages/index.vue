@@ -239,6 +239,16 @@ const projects = computed(() => [
 ])
 
 const t = computed(() => content[lang.value])
+const cvHref = computed(() =>
+    lang.value === 'en'
+        ? '/files/valentin-schecklein-cv-en.pdf'
+        : '/files/valentin-schecklein-lebenslauf-de.pdf'
+)
+const cvDownloadName = computed(() =>
+    lang.value === 'en'
+        ? 'valentin-schecklein-cv-en.pdf'
+        : 'valentin-schecklein-lebenslauf-de.pdf'
+)
 
 const setLanguage = (next: 'en' | 'de') => {
   lang.value = next
@@ -338,7 +348,7 @@ useHead(() => ({
           <span aria-hidden="true">↓</span>
         </a>
 
-        <a class="button button-dark" href="/files/resume-en.pdf" download>
+        <a class="button button-dark" :href="cvHref" :download="cvDownloadName">
           {{ t.hero.resume }}
           <span aria-hidden="true">↓</span>
         </a>
@@ -373,7 +383,7 @@ useHead(() => ({
             <span aria-hidden="true">↗</span>
           </a>
 
-          <a class="button button-outline" href="/files/resume-en.pdf" download>
+          <a class="button button-outline" :href="cvHref" :download="cvDownloadName">
             {{ t.hero.resume }}
             <span aria-hidden="true">↓</span>
           </a>
