@@ -324,8 +324,13 @@ img {
   align-items: center;
   min-height: clamp(640px, 78svh, 820px);
   padding: clamp(46px, 6vw, 88px);
+  margin-top: clamp(34px, 4vw, 58px);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(238, 229, 216, 0.96)),
+    var(--paper-strong);
+  border: 1px solid rgba(21, 21, 21, 0.12);
   border-radius: var(--radius);
-  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.14);
 }
 
 .profile-copy {

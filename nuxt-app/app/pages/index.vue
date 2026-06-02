@@ -26,7 +26,7 @@ const content = {
       scroll: 'Keep scrolling'
     },
     about: {
-      heading: 'VALENTIN SCHECKLEIN',
+      heading: "HELLO, I'M VALENTIN.",
       subheading: 'SOFTWARE DEVELOPER WITH PRACTICAL FOCUS',
       location: 'Based near Karlsruhe, Germany',
       storyTitle: 'Profile',
@@ -125,7 +125,7 @@ const content = {
       scroll: 'Weiter scrollen'
     },
     about: {
-      heading: 'VALENTIN SCHECKLEIN',
+      heading: 'HALLO, ICH BIN VALENTIN.',
       subheading: 'SOFTWAREENTWICKLER MIT PRAXISFOKUS',
       location: 'Aus der Nähe von Karlsruhe',
       storyTitle: 'Profil',
@@ -234,20 +234,6 @@ const projects = computed(() => [
         lang.value === 'en'
             ? ['Reverse proxy and TLS setup', 'Secure SSH access and firewall rules', 'Service operations, updates, and troubleshooting']
             : ['Reverse Proxy und TLS-Setup', 'Sicherer SSH-Zugriff und Firewall-Regeln', 'Servicebetrieb, Updates und Troubleshooting'],
-    url: githubUrl
-  },
-  {
-    title: lang.value === 'en' ? 'Java and Flutter projects' : 'Java- und Flutter-Projekte',
-    subtitle:
-        lang.value === 'en'
-            ? 'Smaller tools, app features, experiments, and university-related work.'
-            : 'Kleinere Tools, App-Features, Experimente und studienbezogene Arbeiten.',
-    image: '/img/project-github.svg',
-    tags: ['Java', 'Flutter', 'Dart', 'Git', 'GitHub', 'Linux'],
-    details:
-        lang.value === 'en'
-            ? ['Readable READMEs and documented setup steps', 'Code cleanup for public application portfolio', 'Practical focus over demo-only code']
-            : ['Lesbare READMEs und dokumentierte Setup-Schritte', 'Code-Cleanup für ein öffentliches Bewerbungsportfolio', 'Praktischer Fokus statt reiner Demo-Code'],
     url: githubUrl
   }
 ])
