@@ -19,20 +19,20 @@ const content = {
     hero: {
       eyebrow: 'Computer Science student at DHBW Karlsruhe',
       name: 'VALENTIN SCHECKLEIN',
-      role: 'SOFTWARE DEVELOPER',
+      role: 'SOFTWARE AND INFRASTRUCTURE',
       based: 'Based in Germany',
-      status: 'Graduating soon. Open to full-time roles.',
+      status: 'Finishing my degree and looking for my first full-time role.',
       resume: 'Download CV',
       scroll: 'Keep scrolling'
     },
     about: {
       heading: "HELLO, I'M VALENTIN.",
-      subheading: 'SOFTWARE DEVELOPER WITH PRACTICAL FOCUS',
+      subheading: 'PRACTICAL FOCUS ON SOFTWARE AND INFRASTRUCTURE',
       location: 'Based near Karlsruhe, Germany',
       storyTitle: 'Profile',
       paragraphs: [
-        'I am finishing my computer science degree at DHBW Karlsruhe and focus on practical software work: backend services, mobile and web apps, databases, authentication, deployment, and Linux-based infrastructure.',
-        'My strongest areas are Java and Spring Boot, Flutter and Dart, PostgreSQL, REST APIs, nginx, systemd, Git workflows, and secure VPS operations. I like systems that are understandable, maintainable, and useful in daily work.'
+        'Wrapping up my computer science degree at DHBW Karlsruhe. My work has covered backend services, mobile and web apps, databases, authentication, deployment, and Linux-based server operations.',
+        'On the technical side, I have spent most of my time with Java and Spring Boot, Flutter and Dart, PostgreSQL, REST APIs, nginx, systemd, and running a VPS. I like building things that are easy to maintain and actually useful.'
       ],
       stats: [
         { value: 'DHBW', label: 'Computer Science' },
@@ -42,33 +42,33 @@ const content = {
       ]
     },
     work: {
-      heading: 'FEATURED WORKS',
-      intro: 'Selected work that shows software development, infrastructure, deployment, and practical problem solving.',
+      heading: 'FEATURED WORK',
+      intro: 'A selection of projects covering backend development, infrastructure, and deployment.',
       live: 'View details',
       repo: 'Repository'
     },
     skills: {
-      heading: 'BEST SKILLS',
-      intro: 'A compact overview of the technologies I can explain, use, and show in projects or infrastructure work.',
+      heading: 'SKILLS',
+      intro: 'Technologies I have used in projects, coursework, and my own infrastructure.',
       groups: [
         {
           title: 'Backend',
-          text: 'Java services, REST APIs, authentication, database migrations, tests, and maintainable project structure.',
+          text: 'Java backend services with Spring Boot, REST APIs, authentication, database migrations, and tests.',
           tags: ['Java', 'Spring Boot', 'REST APIs', 'JWT', 'Flyway', 'Maven', 'JUnit', 'PostgreSQL']
         },
         {
           title: 'Frontend',
-          text: 'Flutter apps for Android and web, PWA workflows, UI implementation, and API integration.',
+          text: 'Flutter apps for Android and web, including PWA deployments and API integration.',
           tags: ['Flutter', 'Dart', 'Android', 'PWA', 'Vue', 'Nuxt', 'HTML', 'CSS']
         },
         {
           title: 'Infrastructure',
-          text: 'Linux servers, reverse proxies, TLS, secure remote access, service management, and troubleshooting.',
+          text: 'Ubuntu VPS operations: nginx, TLS, SSH hardening, systemd services, and routine maintenance.',
           tags: ['Linux', 'Ubuntu', 'Arch', 'nginx', 'systemd', 'Certbot', 'WireGuard', 'Fail2Ban', 'SSH']
         },
         {
           title: 'Tooling',
-          text: 'Daily development workflows, version control, CI/CD, IDEs, documentation, and task automation.',
+          text: 'Version control, CI/CD pipelines, IDEs, and general development tooling.',
           tags: ['Git', 'GitHub', 'GitHub Actions', 'GitLab CI', 'IntelliJ IDEA', 'WebStorm', 'PowerShell', 'Codex']
         }
       ]
@@ -78,19 +78,19 @@ const content = {
       items: [
         {
           q: 'What kind of role are you looking for?',
-          a: 'A full-time software role after graduation. Backend, full-stack, Flutter, platform-adjacent, and infrastructure-leaning roles are all interesting to me.'
+          a: 'A full-time role after graduation. I am open to backend, full-stack, Flutter, platform work, or anything infrastructure-adjacent. If the work is interesting and the team is good, I want to hear about it.'
         },
         {
-          q: 'What makes your profile practical?',
-          a: 'I combine university work with real systems: Java backend development, Flutter apps, PostgreSQL, Git workflows, and a VPS running multiple public services.'
+          q: 'What have you built outside of university?',
+          a: 'Alongside university, I have built and maintained real things: a Java and Flutter project, PostgreSQL databases, and a VPS running several public-facing services.'
         },
         {
           q: 'Do you have server and deployment experience?',
-          a: 'Yes. I run Linux services with nginx, TLS certificates, systemd, SSH, Fail2Ban, WireGuard, backups, and regular maintenance on an Ubuntu VPS.'
+          a: 'Yes. I run an Ubuntu VPS with nginx, TLS certificates via Certbot, SSH hardening, Fail2Ban, WireGuard, systemd services, and regular backups.'
         },
         {
           q: 'Can I see code examples?',
-          a: 'My GitHub contains selected Java, Flutter, and infrastructure-related work. I am currently cleaning up and documenting the most relevant repositories for applications.'
+          a: 'My GitHub has selected Java, Flutter, and infrastructure projects. I am cleaning up and documenting the most relevant ones for applications.'
         },
         {
           q: 'Which languages do you speak?',
@@ -99,8 +99,8 @@ const content = {
       ]
     },
     contact: {
-      heading: 'LET US TALK',
-      text: 'I am preparing for graduation and looking for a full-time role. Send me a message if my profile fits your team.',
+      heading: "LET'S TALK",
+      text: 'Finishing my degree and looking for my first full-time role. If my profile looks like a fit, get in touch.',
       email: 'Email',
       github: 'GitHub',
       linkedin: 'LinkedIn placeholder'
@@ -116,25 +116,25 @@ const content = {
       contact: 'Kontakt'
     },
     hero: {
-      eyebrow: 'Wirtschaftsinformatik-Student an der DHBW Karlsruhe',
+      eyebrow: 'Informatik-Student an der DHBW Karlsruhe',
       name: 'VALENTIN SCHECKLEIN',
-      role: 'SOFTWARE DEVELOPER',
+      role: 'SOFTWARE UND INFRASTRUKTUR',
       based: 'Aus Deutschland',
-      status: 'Bald mit dem Studium fertig. Offen für Vollzeitstellen.',
+      status: 'Kurz vor dem Abschluss, auf der Suche nach meiner ersten Vollzeitstelle.',
       resume: 'Lebenslauf laden',
       scroll: 'Weiter scrollen'
     },
     about: {
       heading: 'HALLO, ICH BIN VALENTIN.',
-      subheading: 'SOFTWAREENTWICKLER MIT PRAXISFOKUS',
+      subheading: 'PRAXISFOKUS AUF SOFTWARE UND INFRASTRUKTUR',
       location: 'Aus der Nähe von Karlsruhe',
       storyTitle: 'Profil',
       paragraphs: [
-        'Ich schließe bald mein Studium der Wirtschaftsinformatik an der DHBW Karlsruhe ab. Mein Fokus liegt auf praktischer Softwareentwicklung: Backend-Services, mobile und Web-Apps, Datenbanken, Authentifizierung, Deployment und Linux-basierte Infrastruktur.',
-        'Meine stärksten Bereiche sind Java und Spring Boot, Flutter und Dart, PostgreSQL, REST APIs, nginx, systemd, Git-Workflows und der sichere Betrieb eines VPS. Ich mag Systeme, die verständlich, wartbar und im Alltag nützlich sind.'
+        'Ich schließe mein Informatikstudium an der DHBW Karlsruhe ab. Praktisch habe ich vor allem an Backend-Services, mobilen und Web-Apps, Datenbanken, Authentifizierung, Deployment und Linux-basierter Serverinfrastruktur gearbeitet.',
+        'Technisch bin ich am meisten zu Hause in Java und Spring Boot, Flutter und Dart, PostgreSQL, REST APIs, nginx, systemd und dem Betrieb eines VPS. Systeme, die wartbar und im Alltag nützlich sind, gefallen mir.'
       ],
       stats: [
-        { value: 'DHBW', label: 'Wirtschaftsinformatik' },
+        { value: 'DHBW', label: 'Informatik' },
         { value: 'Java', label: 'Backend-Fokus' },
         { value: 'Linux', label: 'Serverbetrieb' },
         { value: 'Flutter', label: 'Apps und PWA' }
@@ -142,32 +142,32 @@ const content = {
     },
     work: {
       heading: 'AUSGEWÄHLTE PROJEKTE',
-      intro: 'Ausgewählte Arbeiten mit Fokus auf Softwareentwicklung, Infrastruktur, Deployment und praktische Problemlösung.',
+      intro: 'Eine Auswahl von Projekten aus Backend-Entwicklung, Infrastruktur und Deployment.',
       live: 'Details ansehen',
       repo: 'Repository'
     },
     skills: {
-      heading: 'BESTE SKILLS',
-      intro: 'Ein kompakter Überblick über Technologien, die ich in Projekten oder im Infrastruktur-Betrieb nutze und erklären kann.',
+      heading: 'SKILLS',
+      intro: 'Technologien, die ich in Projekten, im Studium und in eigener Infrastruktur genutzt habe.',
       groups: [
         {
           title: 'Backend',
-          text: 'Java-Services, REST APIs, Authentifizierung, Datenbankmigrationen, Tests und wartbare Projektstruktur.',
+          text: 'Java-Backend-Services mit Spring Boot, REST APIs, Authentifizierung, Datenbankmigrationen und Tests.',
           tags: ['Java', 'Spring Boot', 'REST APIs', 'JWT', 'Flyway', 'Maven', 'JUnit', 'PostgreSQL']
         },
         {
           title: 'Frontend',
-          text: 'Flutter-Apps für Android und Web, PWA-Workflows, UI-Umsetzung und API-Anbindung.',
+          text: 'Flutter-Apps für Android und Web, inklusive PWA-Deployment und API-Anbindung.',
           tags: ['Flutter', 'Dart', 'Android', 'PWA', 'Vue', 'Nuxt', 'HTML', 'CSS']
         },
         {
           title: 'Infrastruktur',
-          text: 'Linux-Server, Reverse Proxies, TLS, sicherer Fernzugriff, Serviceverwaltung und Troubleshooting.',
+          text: 'Ubuntu-VPS-Betrieb: nginx, TLS, SSH-Härtung, systemd-Services und regelmäßige Wartung.',
           tags: ['Linux', 'Ubuntu', 'Arch', 'nginx', 'systemd', 'Certbot', 'WireGuard', 'Fail2Ban', 'SSH']
         },
         {
           title: 'Tooling',
-          text: 'Tägliche Entwicklungsabläufe, Versionsverwaltung, CI/CD, IDEs, Dokumentation und Aufgabenautomatisierung.',
+          text: 'Versionsverwaltung, CI/CD-Pipelines, IDEs und allgemeines Entwicklungs-Tooling.',
           tags: ['Git', 'GitHub', 'GitHub Actions', 'GitLab CI', 'IntelliJ IDEA', 'WebStorm', 'PowerShell', 'Codex']
         }
       ]
@@ -177,19 +177,19 @@ const content = {
       items: [
         {
           q: 'Welche Stelle suchst du?',
-          a: 'Eine Vollzeitstelle nach dem Studium. Backend, Full-Stack, Flutter, platform-nahe Entwicklung und infra-nahe Rollen passen gut zu meinem Profil.'
+          a: 'Eine Vollzeitstelle nach dem Abschluss. Ich bin offen für Backend-, Full-Stack-, Flutter-, plattformnahe oder infrastrukturnahe Tätigkeiten. Wenn die Arbeit interessant ist und das Team passt, bin ich dabei.'
         },
         {
-          q: 'Was macht dein Profil praxisnah?',
-          a: 'Ich verbinde Studium mit echten Systemen: Java-Backendentwicklung, Flutter-Apps, PostgreSQL, Git-Workflows und ein VPS mit mehreren öffentlich erreichbaren Diensten.'
+          q: 'Was hast du außerhalb der Uni gebaut?',
+          a: 'Neben dem Studium habe ich echte Sachen gebaut und betrieben: ein Java-und-Flutter-Projekt, PostgreSQL-Datenbanken und einen VPS mit mehreren öffentlich erreichbaren Diensten.'
         },
         {
           q: 'Hast du Erfahrung mit Servern und Deployment?',
-          a: 'Ja. Ich betreibe Linux-Dienste mit nginx, TLS-Zertifikaten, systemd, SSH, Fail2Ban, WireGuard, Backups und regelmäßiger Wartung auf einem Ubuntu-VPS.'
+          a: 'Ja. Ich betreibe einen Ubuntu-VPS mit nginx, TLS-Zertifikaten via Certbot, SSH-Härtung, Fail2Ban, WireGuard, systemd-Services und regelmäßigen Backups.'
         },
         {
           q: 'Kann man Codebeispiele sehen?',
-          a: 'Auf meinem GitHub gibt es ausgewählte Java-, Flutter- und Infrastrukturprojekte. Ich bereite gerade die wichtigsten Repositories für Bewerbungen auf.'
+          a: 'Auf meinem GitHub gibt es ausgewählte Java-, Flutter- und Infrastrukturprojekte. Ich bereite gerade die relevantesten Repositories für Bewerbungen auf.'
         },
         {
           q: 'Welche Sprachen sprichst du?',
@@ -198,8 +198,8 @@ const content = {
       ]
     },
     contact: {
-      heading: 'LASS UNS SPRECHEN',
-      text: 'Ich bereite mich auf meinen Studienabschluss vor und suche eine Vollzeitstelle. Schreib mir, wenn mein Profil zu deinem Team passt.',
+      heading: 'LASS UNS REDEN',
+      text: 'Ich schließe mein Studium ab und suche meine erste Vollzeitstelle. Wenn mein Profil passt, meld dich.',
       email: 'E-Mail',
       github: 'GitHub',
       linkedin: 'LinkedIn Platzhalter'
@@ -212,8 +212,8 @@ const projects = computed(() => [
     title: lang.value === 'en' ? 'Verhåårm administration system' : 'Verhåårm Verwaltungssystem',
     subtitle:
         lang.value === 'en'
-            ? 'Custom administration system with Spring Boot backend and Flutter frontend.'
-            : 'Eigenes Verwaltungssystem mit Spring-Boot-Backend und Flutter-Frontend.',
+            ? 'An administration system with a Spring Boot backend and a Flutter frontend.'
+            : 'Verwaltungssystem mit Spring-Boot-Backend und Flutter-Frontend.',
     image: '/img/project-verhaarm.svg',
     tags: ['Java', 'Spring Boot', 'Flutter', 'PostgreSQL', 'JWT', 'Flyway'],
     details:
@@ -270,7 +270,7 @@ useHead(() => ({
       content:
           lang.value === 'en'
               ? 'Portfolio of Valentin Schecklein, computer science student at DHBW Karlsruhe and software developer.'
-              : 'Portfolio von Valentin Schecklein, Wirtschaftsinformatik-Student an der DHBW Karlsruhe und Softwareentwickler.'
+              : 'Portfolio von Valentin Schecklein, Informatik-Student an der DHBW Karlsruhe und Softwareentwickler.'
     }
   ]
 }))
