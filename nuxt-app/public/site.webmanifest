@@ -1,0 +1,8 @@
+{
+  "name": "Valentin Schecklein Portfolio",
+  "short_name": "Valentin",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#e8e2da",
+  "theme_color": "#111111"
+}

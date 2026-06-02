@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="VPS infrastructure preview">
+  <rect width="900" height="560" fill="#202020"/>
+  <rect x="80" y="96" width="740" height="370" fill="#111" stroke="#f5f1ea" stroke-opacity=".35"/>
+  <rect x="120" y="142" width="250" height="64" fill="#f5f1ea"/>
+  <rect x="120" y="242" width="250" height="64" fill="#f5f1ea" opacity=".82"/>
+  <rect x="120" y="342" width="250" height="64" fill="#f5f1ea" opacity=".64"/>
+  <path d="M418 174h86m0 0v200m0-200h72m-72 100h72m-72 100h72" stroke="#f5f1ea" stroke-width="14" stroke-linecap="square"/>
+  <rect x="615" y="142" width="170" height="64" fill="#f5f1ea"/>
+  <rect x="615" y="242" width="170" height="64" fill="#f5f1ea" opacity=".82"/>
+  <rect x="615" y="342" width="170" height="64" fill="#f5f1ea" opacity=".64"/>
+  <text x="120" y="442" font-family="Courier New, monospace" font-size="42" font-weight="900" fill="#f5f1ea">LINUX VPS</text>
+</svg>

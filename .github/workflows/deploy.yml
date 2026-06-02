@@ -1,0 +1,102 @@
+name: Deploy valentin.dev portfolio
+
+on:
+  workflow_dispatch:
+    inputs:
+      backup_before_deploy:
+        description: "Create a timestamped backup on the VPS before rsync"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
+      delete_extraneous:
+        description: "Use rsync --delete-after to remove files not present locally"
+        required: false
+        default: "true"
+        type: choice
+        options: ["false", "true"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: manual-deploy-valentin-dev
+      cancel-in-progress: true
+
+    steps:
+      - name: 0) Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 1) Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: 2) Install dependencies
+        working-directory: nuxt-app
+        run: |
+          set -Eeuo pipefail
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+
+      - name: 3) Generate static Nuxt site
+        working-directory: nuxt-app
+        run: |
+          set -Eeuo pipefail
+          npm run generate
+          echo "Generated files:"
+          find .output/public -maxdepth 2 -type f | sort | head -n 80
+
+      - name: 4) Start ssh-agent and add key
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: 5) Add VPS host key to known_hosts
+        run: |
+          set -Eeuo pipefail
+          mkdir -p ~/.ssh
+          ssh-keyscan -p "${{ secrets.VPS_PORT }}" "${{ secrets.VPS_HOST }}" >> ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: 6) Check remote deploy path
+        run: |
+          set -Eeuo pipefail
+          ssh -p "${{ secrets.VPS_PORT }}" "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" \
+            'set -Eeuo pipefail; mkdir -p /var/www/valentin.dev/html; ls -la /var/www/valentin.dev /var/www/valentin.dev/html'
+
+      - name: 7) Optional backup on VPS
+        if: ${{ github.event.inputs.backup_before_deploy == 'true' }}
+        run: |
+          set -Eeuo pipefail
+          ssh -p "${{ secrets.VPS_PORT }}" "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" \
+            'set -Eeuo pipefail; \
+             ts=$(date +%Y%m%d-%H%M%S); \
+             mkdir -p /var/www/valentin.dev/backups; \
+             tar -C /var/www/valentin.dev -czf "/var/www/valentin.dev/backups/html-$ts.tgz" html; \
+             ls -lh "/var/www/valentin.dev/backups/html-$ts.tgz"'
+
+      - name: 8) Rsync generated site to VPS
+        working-directory: nuxt-app
+        env:
+          RSYNC_DELETE: ${{ github.event.inputs.delete_extraneous }}
+        run: |
+          set -Eeuo pipefail
+          RSYNC_OPTS="-az --stats --human-readable --info=progress2"
+
+          if [ "$RSYNC_DELETE" = "true" ]; then
+            RSYNC_OPTS="$RSYNC_OPTS --delete-after"
+          fi
+
+          rsync $RSYNC_OPTS -e "ssh -p ${{ secrets.VPS_PORT }}" \
+            ".output/public/" \
+            "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/valentin.dev/html/"
+
+      - name: 9) Reload nginx
+        run: |
+          set -Eeuo pipefail
+          ssh -p "${{ secrets.VPS_PORT }}" "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" \
+            'set -Eeuo pipefail; sudo nginx -t; sudo systemctl reload nginx'
