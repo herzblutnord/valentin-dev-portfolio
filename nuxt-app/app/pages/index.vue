@@ -333,11 +333,25 @@ useHead(() => ({
 
       <div class="language-switch" :aria-label="t.languageLabel">
         <button :class="{ active: lang === 'en' }" type="button" @click="setLanguage('en')">
-          <span aria-hidden="true">🇬🇧</span>
+          <img
+              class="flag-icon"
+              src="/img/flag-gb.svg"
+              alt=""
+              aria-hidden="true"
+              width="20"
+              height="14"
+          >
           EN
         </button>
         <button :class="{ active: lang === 'de' }" type="button" @click="setLanguage('de')">
-          <span aria-hidden="true">🇩🇪</span>
+          <img
+              class="flag-icon"
+              src="/img/flag-de.svg"
+              alt=""
+              aria-hidden="true"
+              width="20"
+              height="14"
+          >
           DE
         </button>
       </div>
