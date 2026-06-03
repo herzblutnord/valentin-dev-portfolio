@@ -317,7 +317,7 @@ useHead(() => ({
 <template>
   <main class="site-shell">
     <header class="topbar" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="Go to top">Valentin Schecklein</a>
+      <a class="brand" href="#" aria-label="Go to top">Valentin Schecklein</a>
 
       <nav class="nav-links" aria-label="Section navigation">
         <a href="#about">{{ t.nav.about }}</a>
