@@ -29,7 +29,7 @@ const content = {
     about: {
       heading: "HELLO, I'M VALENTIN.",
       subheading: 'PRACTICAL FOCUS ON SOFTWARE AND INFRASTRUCTURE',
-      location: 'Based near Karlsruhe, Germany',
+      location: 'Based in Karlsruhe, Germany',
       storyTitle: 'Profile',
       paragraphs: [
         'Wrapping up my computer science degree at DHBW Karlsruhe. My work has covered backend services, mobile and web apps, databases, authentication, deployment, and Linux-based server operations.',
@@ -128,7 +128,7 @@ const content = {
     about: {
       heading: 'HALLO, ICH BIN VALENTIN.',
       subheading: 'PRAXISFOKUS AUF SOFTWARE UND INFRASTRUKTUR',
-      location: 'Aus der Nähe von Karlsruhe',
+      location: 'Aus Karlsruhe',
       storyTitle: 'Profil',
       paragraphs: [
         'Ich schließe mein Informatikstudium an der DHBW Karlsruhe ab. Praktisch habe ich vor allem an Backend-Services, mobilen und Web-Apps, Datenbanken, Authentifizierung, Deployment und Linux-basierter Serverinfrastruktur gearbeitet.',
