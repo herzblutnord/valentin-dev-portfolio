@@ -686,7 +686,6 @@ img {
   grid-template-columns: minmax(0, 0.85fr) minmax(260px, 0.65fr);
   gap: clamp(30px, 6vw, 90px);
   padding: clamp(56px, 8vw, 110px);
-  margin-bottom: 34px;
   border-radius: var(--radius) var(--radius) 0 0;
 }
 
