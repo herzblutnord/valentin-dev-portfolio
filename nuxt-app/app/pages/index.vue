@@ -37,7 +37,7 @@ const content = {
       ],
       stats: [
         { value: 'DHBW', label: 'Computer Science' },
-        { value: 'Java', label: 'Backend focus' },
+        { value: 'Java', label: 'Coding' },
         { value: 'Linux', label: 'Server operations' },
         { value: 'Flutter', label: 'Apps and PWA' }
       ]
@@ -136,7 +136,7 @@ const content = {
       ],
       stats: [
         { value: 'DHBW', label: 'Informatik' },
-        { value: 'Java', label: 'Backend-Fokus' },
+        { value: 'Java', label: 'Programmieren' },
         { value: 'Linux', label: 'Serverbetrieb' },
         { value: 'Flutter', label: 'Apps und PWA' }
       ]
