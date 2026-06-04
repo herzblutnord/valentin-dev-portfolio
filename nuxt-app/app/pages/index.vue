@@ -20,37 +20,37 @@ const content = {
     hero: {
       eyebrow: 'Computer Science student at DHBW Karlsruhe',
       name: 'VALENTIN SCHECKLEIN',
-      role: 'SOFTWARE AND INFRASTRUCTURE',
+      role: 'SOFTWARE, DEVOPS AND INFRASTRUCTURE',
       based: 'Based in Germany',
-      status: 'Finishing my degree and looking for my first full-time role.',
+      status: 'Finishing my degree in October 2026. Open to software development, DevOps and infrastructure roles.',
       resume: 'Download CV',
       scroll: 'Keep scrolling'
     },
     about: {
       heading: "HELLO, I'M VALENTIN.",
-      subheading: 'PRACTICAL FOCUS ON SOFTWARE AND INFRASTRUCTURE',
+      subheading: 'SOFTWARE, DEVOPS AND INFRASTRUCTURE',
       location: 'Based in Karlsruhe, Germany',
       storyTitle: 'Profile',
       paragraphs: [
-        'Wrapping up my computer science degree at DHBW Karlsruhe. My work has covered backend services, mobile and web apps, databases, authentication, deployment, and Linux-based server operations.',
-        'On the technical side, I have spent most of my time with Java and Spring Boot, Flutter and Dart, PostgreSQL, REST APIs, nginx, systemd, and running a VPS. I like building things that are easy to maintain and actually useful.'
+        'DHBW Karlsruhe runs a cooperative degree programme, which means I have been working full-time in IT alongside my studies since 2022. By the time I graduate in October 2026 I will have around four years of professional experience.',
+        'My expirience covers backend services, cross-platform apps, CI/CD pipelines and Linux server operations. I have shipped web apps, Android builds and Nuxt SSR deployments through GitHub Actions and GitLab CI. I use AI coding tools from multiple providers daily for writing, reviewing and debugging code.'
       ],
       stats: [
         { value: 'DHBW', label: 'Computer Science' },
         { value: 'Java', label: 'Coding' },
-        { value: 'Linux', label: 'Server operations' },
-        { value: 'Flutter', label: 'Apps and PWA' }
+        { value: 'Linux', label: 'Server & DevOps' },
+        { value: 'CI/CD', label: 'Pipelines & deployment' }
       ]
     },
     work: {
       heading: 'FEATURED WORK',
-      intro: 'A selection of projects covering backend development, infrastructure, and deployment.',
+      intro: 'A selection of projects covering backend services, cross-platform apps, CI/CD and infrastructure.',
       live: 'View details',
       repo: 'Repository'
     },
     skills: {
       heading: 'SKILLS',
-      intro: 'Technologies I have used in projects, coursework, and my own infrastructure.',
+      intro: 'Technologies I have used in projects, coursework, work and my own infrastructure.',
       groups: [
         {
           title: 'Backend',
@@ -68,9 +68,14 @@ const content = {
           tags: ['Linux', 'Ubuntu', 'Arch', 'nginx', 'systemd', 'Certbot', 'WireGuard', 'Fail2Ban', 'SSH']
         },
         {
-          title: 'Tooling',
-          text: 'Version control, CI/CD pipelines, IDEs, and general development tooling.',
-          tags: ['Git', 'GitHub', 'GitHub Actions', 'GitLab CI', 'IntelliJ IDEA', 'WebStorm', 'PowerShell', 'Codex']
+          title: 'CI/CD & Deployment',
+          text: 'Pipelines for web, Android and Nuxt SSR deployments. Covered pipeline quality and security assessment as part of a Software Quality module at DHBW.',
+          tags: ['GitHub Actions', 'GitLab CI', 'Android deployment', 'Nuxt SSR', 'Git', 'GitHub', 'GitLab', 'IntelliJ IDEA', 'WebStorm', 'PowerShell']
+        },
+        {
+          title: 'AI tooling',
+          text: 'Daily use of AI coding tools from multiple providers. Codex as the main tool, others chosen depending on the task. Code review, debugging and analysis are where most of the value comes from.',
+          tags: ['Codex', 'AI-assisted coding', 'LLM tooling', 'code analysis']
         }
       ]
     },
@@ -79,15 +84,15 @@ const content = {
       items: [
         {
           q: 'What kind of role are you looking for?',
-          a: 'A full-time role after graduation. I am open to backend, full-stack, Flutter, platform work, or anything infrastructure-adjacent. If the work is interesting and the team is good, I want to hear about it.'
+          a: 'A full-time role after graduation. I am equally open to software development, DevOps, CI/CD and infrastructure-focused positions. The work matters more than the exact title.'
         },
         {
           q: 'What have you built outside of university?',
-          a: 'Alongside university, I have built and maintained real things: a Java and Flutter project, PostgreSQL databases, and a VPS running several public-facing services.'
+          a: 'DHBW is a dual study programme, so I have been working in IT full-time alongside my degree since 2022. Outside of that I have built and maintained real things: a Java and Flutter project, PostgreSQL databases, CI/CD pipelines, and a VPS running several public-facing services.'
         },
         {
           q: 'Do you have server and deployment experience?',
-          a: 'Yes. I run an Ubuntu VPS with nginx, TLS certificates via Certbot, SSH hardening, Fail2Ban, WireGuard, systemd services, and regular backups.'
+          a: 'Yes. I run an Ubuntu VPS with nginx, TLS via Certbot, SSH hardening, Fail2Ban, WireGuard, systemd services and regular backups. I have also set up and maintained CI/CD pipelines for web, Android and Nuxt SSR deployments using GitHub Actions and GitLab CI.'
         },
         {
           q: 'Can I see code examples?',
@@ -101,7 +106,7 @@ const content = {
     },
     contact: {
       heading: "LET'S TALK",
-      text: 'Finishing my degree and looking for my first full-time role. If my profile looks like a fit, get in touch.',
+      text: 'Finishing my degree in October 2026 and looking for a full-time role in software development, DevOps or infrastructure. If my profile looks like a fit, get in touch.',
       email: 'Email',
       github: 'GitHub',
       linkedin: 'LinkedIn'
@@ -119,37 +124,37 @@ const content = {
     hero: {
       eyebrow: 'Informatik-Student an der DHBW Karlsruhe',
       name: 'VALENTIN SCHECKLEIN',
-      role: 'SOFTWARE UND INFRASTRUKTUR',
+      role: 'SOFTWARE, DEVOPS UND INFRASTRUKTUR',
       based: 'Aus Deutschland',
-      status: 'Kurz vor dem Abschluss, auf der Suche nach meiner ersten Vollzeitstelle.',
+      status: 'Abschluss im Oktober 2026. Offen für Softwareentwicklung, DevOps und Infrastruktur.',
       resume: 'Lebenslauf laden',
       scroll: 'Weiter scrollen'
     },
     about: {
       heading: 'HALLO, ICH BIN VALENTIN.',
-      subheading: 'PRAXISFOKUS AUF SOFTWARE UND INFRASTRUKTUR',
+      subheading: 'SOFTWARE, DEVOPS UND INFRASTRUKTUR',
       location: 'Aus Karlsruhe',
       storyTitle: 'Profil',
       paragraphs: [
-        'Ich schließe mein Informatikstudium an der DHBW Karlsruhe ab. Praktisch habe ich vor allem an Backend-Services, mobilen und Web-Apps, Datenbanken, Authentifizierung, Deployment und Linux-basierter Serverinfrastruktur gearbeitet.',
-        'Technisch bin ich am meisten zu Hause in Java und Spring Boot, Flutter und Dart, PostgreSQL, REST APIs, nginx, systemd und dem Betrieb eines VPS. Systeme, die wartbar und im Alltag nützlich sind, gefallen mir.'
+        'Die DHBW Karlsruhe ist eine Duale Hochschule, was bedeutet, dass ich seit 2022 neben meinem Studium durchgehend in einer Unternehmens IT gearbeitet habe. Wenn ich im Oktober 2026 abschließe, bringe ich rund vier Jahre Berufserfahrung mit.',
+        'Mein Erfahrungsbereich umfasst Backend-Services, Cross-Platform-Apps, CI/CD-Pipelines und Linux-basierte Serverinfrastruktur. Ich habe Web-Apps, Android-Builds und Nuxt-SSR-Apps über GitHub Actions und GitLab CI deployed. KI-gestützte Entwicklungstools nutze ich täglich, mit Modellen verschiedener Anbieter je nach Aufgabe.'
       ],
       stats: [
         { value: 'DHBW', label: 'Informatik' },
         { value: 'Java', label: 'Programmieren' },
-        { value: 'Linux', label: 'Serverbetrieb' },
-        { value: 'Flutter', label: 'Apps und PWA' }
+        { value: 'Linux', label: 'Server & DevOps' },
+        { value: 'CI/CD', label: 'Pipelines & Deployment' }
       ]
     },
     work: {
       heading: 'AUSGEWÄHLTE PROJEKTE',
-      intro: 'Eine Auswahl von Projekten aus Backend-Entwicklung, Infrastruktur und Deployment.',
+      intro: 'Eine Auswahl von Projekten aus Backend-Services, Cross-Platform-Apps, CI/CD und Infrastruktur.',
       live: 'Details ansehen',
       repo: 'Repository'
     },
     skills: {
       heading: 'SKILLS',
-      intro: 'Technologien, die ich in Projekten, im Studium und in eigener Infrastruktur genutzt habe.',
+      intro: 'Technologien, die ich in Projekten, im Studium, im Job und in eigener Infrastruktur genutzt habe.',
       groups: [
         {
           title: 'Backend',
@@ -167,9 +172,14 @@ const content = {
           tags: ['Linux', 'Ubuntu', 'Arch', 'nginx', 'systemd', 'Certbot', 'WireGuard', 'Fail2Ban', 'SSH']
         },
         {
-          title: 'Tooling',
-          text: 'Versionsverwaltung, CI/CD-Pipelines, IDEs und allgemeines Entwicklungs-Tooling.',
-          tags: ['Git', 'GitHub', 'GitHub Actions', 'GitLab CI', 'IntelliJ IDEA', 'WebStorm', 'PowerShell', 'Codex']
+          title: 'CI/CD & Deployment',
+          text: 'Pipelines für Web-, Android- und Nuxt-SSR-Deployments. Qualität und Sicherheit von CI/CD-Pipelines waren Schwerpunkt im Modul Softwarequalität an der DHBW.',
+          tags: ['GitHub Actions', 'GitLab CI', 'Android-Deployment', 'Nuxt SSR', 'Git', 'GitHub', 'GitLab', 'IntelliJ IDEA', 'WebStorm', 'PowerShell']
+        },
+        {
+          title: 'KI-Tools',
+          text: 'Tägliche Nutzung von KI-gestützten Entwicklungstools verschiedener Anbieter. Codex als Haupt-Tool, andere je nach Aufgabe. Code-Reviews, Debugging und Analyse sind die häufigsten Anwendungsfälle.',
+          tags: ['Codex', 'KI-gestützte Entwicklung', 'LLM-Tooling', 'Code-Analyse']
         }
       ]
     },
@@ -178,15 +188,15 @@ const content = {
       items: [
         {
           q: 'Welche Stelle suchst du?',
-          a: 'Eine Vollzeitstelle nach dem Abschluss. Ich bin offen für Backend-, Full-Stack-, Flutter-, plattformnahe oder infrastrukturnahe Tätigkeiten. Wenn die Arbeit interessant ist und das Team passt, bin ich dabei.'
+          a: 'Eine Vollzeitstelle nach dem Abschluss. Ich bin gleichermaßen offen für Softwareentwicklung, DevOps, CI/CD und infrastrukturbezogene Rollen. Die Arbeit selbst ist mir wichtiger als der genaue Titel.'
         },
         {
           q: 'Was hast du außerhalb der Uni gebaut?',
-          a: 'Neben dem Studium habe ich echte Sachen gebaut und betrieben: ein Java-und-Flutter-Projekt, PostgreSQL-Datenbanken und einen VPS mit mehreren öffentlich erreichbaren Diensten.'
+          a: 'Die DHBW ist eine Duale Hochschule, also habe ich seit 2022 neben dem Studium in Vollzeit in einem IT-Unternehmen gearbeitet. Daneben habe ich echte Sachen gebaut und betrieben: ein Java-und-Flutter-Projekt, PostgreSQL-Datenbanken, CI/CD-Pipelines und einen VPS mit mehreren öffentlich erreichbaren Diensten.'
         },
         {
           q: 'Hast du Erfahrung mit Servern und Deployment?',
-          a: 'Ja. Ich betreibe einen Ubuntu-VPS mit nginx, TLS-Zertifikaten via Certbot, SSH-Härtung, Fail2Ban, WireGuard, systemd-Services und regelmäßigen Backups.'
+          a: 'Ja. Ich betreibe einen Ubuntu-VPS mit nginx, TLS via Certbot, SSH-Härtung, Fail2Ban, WireGuard, systemd-Services und regelmäßigen Backups. Dazu habe ich CI/CD-Pipelines für Web-, Android- und Nuxt-SSR-Deployments via GitHub Actions und GitLab CI aufgesetzt und gewartet.'
         },
         {
           q: 'Kann man Codebeispiele sehen?',
@@ -200,7 +210,7 @@ const content = {
     },
     contact: {
       heading: 'LASS UNS REDEN',
-      text: 'Ich schließe mein Studium ab und suche meine erste Vollzeitstelle. Wenn mein Profil passt, meld dich.',
+      text: 'Ich schließe mein Studium im Oktober 2026 ab und suche eine Vollzeitstelle in Softwareentwicklung, DevOps oder Infrastruktur. Wenn mein Profil passt, meld dich.',
       email: 'E-Mail',
       github: 'GitHub',
       linkedin: 'LinkedIn'
@@ -300,15 +310,15 @@ useHead(() => ({
   },
   title:
       lang.value === 'en'
-          ? 'Valentin Schecklein - Software Developer'
-          : 'Valentin Schecklein - Softwareentwickler',
+          ? 'Valentin Schecklein - Software, DevOps & Infrastructure'
+          : 'Valentin Schecklein - Software, DevOps & Infrastruktur',
   meta: [
     {
       name: 'description',
       content:
           lang.value === 'en'
-              ? 'Portfolio of Valentin Schecklein, computer science student at DHBW Karlsruhe and software developer.'
-              : 'Portfolio von Valentin Schecklein, Informatik-Student an der DHBW Karlsruhe und Softwareentwickler.'
+              ? 'Portfolio of Valentin Schecklein - computer science student at DHBW Karlsruhe with experience in software development, CI/CD and Linux infrastructure.'
+              : 'Portfolio von Valentin Schecklein - Informatik-Student an der DHBW Karlsruhe mit Erfahrung in Softwareentwicklung, CI/CD und Linux-Infrastruktur.'
     }
   ]
 }))
