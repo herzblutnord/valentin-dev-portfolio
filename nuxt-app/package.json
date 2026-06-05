@@ -21,5 +21,9 @@
   },
   "engines": {
     "node": ">=20.19.0"
+  },
+  "optionalDependencies": {
+    "@emnapi/core": "^1.7.1",
+    "@emnapi/runtime": "^1.7.1"
   }
 }
