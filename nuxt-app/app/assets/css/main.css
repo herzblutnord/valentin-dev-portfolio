@@ -720,8 +720,8 @@ img {
   }
 
   .hero-card {
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 28px;
     min-height: auto;
     padding: 34px 26px;
@@ -755,7 +755,6 @@ img {
 
   .hero-links,
   .hero-meta,
-  .hero-portrait,
   .hero-bottom {
     position: relative;
     inset: auto;
@@ -771,10 +770,14 @@ img {
   }
 
   .hero-portrait {
-    justify-self: center;
+    position: static;
+    inset: auto;
+    align-self: center;
     width: min(380px, 78vw);
     max-width: 100%;
     max-height: none;
+    transform: none;
+    height: auto;
   }
 
   .hero-bottom {
@@ -854,6 +857,7 @@ img {
 
   .hero-portrait {
     width: min(320px, 78vw);
+    height: auto;
   }
 
   .hero-bottom {
