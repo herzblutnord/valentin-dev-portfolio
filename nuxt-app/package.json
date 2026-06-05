@@ -10,6 +10,8 @@
     "lint": "nuxi typecheck"
   },
   "dependencies": {
+    "@nuxt/image": "^2.0.0",
+    "@nuxtjs/sitemap": "^8.0.15",
     "nuxt": "^4.0.0"
   },
   "devDependencies": {

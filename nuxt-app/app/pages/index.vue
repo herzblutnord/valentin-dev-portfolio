@@ -6,6 +6,10 @@ const openFaq = ref(0)
 const githubUrl = 'https://github.com/herzblutnord'
 const linkedinUrl = 'https://www.linkedin.com/in/valentin-s-a8951816b/'
 const contactEmail = 'v.schecklein@proton.me'
+const runtimeConfig = useRuntimeConfig()
+const siteUrl = computed(() => String(runtimeConfig.public.siteUrl || 'https://valentins.dev').replace(/\/$/, ''))
+const canonicalUrl = computed(() => `${siteUrl.value}/`)
+const profileImageUrl = computed(() => `${siteUrl.value}/img/profilbild4.webp`)
 
 const content = {
   en: {
@@ -304,21 +308,74 @@ onMounted(() => {
   }
 })
 
+const pageTitle = computed(() =>
+    lang.value === 'en'
+        ? 'Valentin Schecklein | Software Developer'
+        : 'Valentin Schecklein | Softwareentwickler'
+)
+const pageDescription = computed(() =>
+    lang.value === 'en'
+        ? 'Portfolio of Valentin Schecklein, a Computer Science student focused on Java backends, Flutter apps, Linux infrastructure, backend services, and self-hosted systems.'
+        : 'Portfolio von Valentin Schecklein, Informatik-Student mit Fokus auf Java-Backends, Flutter-Apps, Linux-Infrastruktur, Backend-Services und selbst gehostete Systeme.'
+)
+const ogDescription = computed(() =>
+    lang.value === 'en'
+        ? 'Selected software projects, backend development, Flutter apps, DevOps, and Linux infrastructure.'
+        : 'Ausgewählte Softwareprojekte, Backend-Entwicklung, Flutter-Apps, DevOps und Linux-Infrastruktur.'
+)
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription,
+  ogImage: profileImageUrl,
+  ogUrl: canonicalUrl,
+  twitterCard: 'summary_large_image',
+  twitterTitle: pageTitle,
+  twitterDescription: ogDescription,
+  twitterImage: profileImageUrl
+})
+
 useHead(() => ({
   htmlAttrs: {
     lang: lang.value
   },
-  title:
-      lang.value === 'en'
-          ? 'Valentin Schecklein - Software, DevOps & Infrastructure'
-          : 'Valentin Schecklein - Software, DevOps & Infrastruktur',
-  meta: [
+  link: [
     {
-      name: 'description',
-      content:
-          lang.value === 'en'
-              ? 'Portfolio of Valentin Schecklein - computer science student at DHBW Karlsruhe with experience in software development, CI/CD and Linux infrastructure.'
-              : 'Portfolio von Valentin Schecklein - Informatik-Student an der DHBW Karlsruhe mit Erfahrung in Softwareentwicklung, CI/CD und Linux-Infrastruktur.'
+      rel: 'canonical',
+      href: canonicalUrl.value
+    }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'Person',
+            '@id': `${canonicalUrl.value}#person`,
+            name: 'Valentin Schecklein',
+            url: canonicalUrl.value,
+            image: profileImageUrl.value,
+            jobTitle: lang.value === 'en' ? 'Computer Science student and software developer' : 'Informatik-Student und Softwareentwickler',
+            description: pageDescription.value,
+            sameAs: [
+              githubUrl,
+              linkedinUrl
+            ]
+          },
+          {
+            '@type': 'WebSite',
+            '@id': `${canonicalUrl.value}#website`,
+            name: 'Valentin Schecklein',
+            url: canonicalUrl.value,
+            description: pageDescription.value,
+            inLanguage: lang.value
+          }
+        ]
+      })
     }
   ]
 }))
@@ -388,11 +445,17 @@ useHead(() => ({
         <p class="hero-status">{{ t.hero.status }}</p>
       </div>
 
-      <img
+      <NuxtImg
           class="hero-portrait"
-          src="/img/smoking4.png"
-          alt="Portrait of Valentin Schecklein."
-      >
+          src="/img/smoking4.webp"
+          alt="Portrait of Valentin Schecklein"
+          width="1287"
+          height="1222"
+          sizes="280px sm:390px md:460px lg:575px"
+          format="webp"
+          quality="85"
+          :preload="{ fetchPriority: 'high' }"
+      />
 
       <div class="hero-bottom">
         <a class="scroll-hint" href="#about" aria-label="Scroll to about section">
@@ -446,7 +509,16 @@ useHead(() => ({
         <div class="profile-visual-label">
           {{ t.hero.role }}
         </div>
-        <img src="/img/profilbild4.png" alt="">
+        <NuxtImg
+            src="/img/profilbild4.webp"
+            alt=""
+            width="3456"
+            height="5184"
+            sizes="280px sm:360px md:460px lg:520px"
+            format="webp"
+            quality="80"
+            loading="lazy"
+        />
       </div>
 
       <div class="profile-stats" aria-label="Profile highlights">
