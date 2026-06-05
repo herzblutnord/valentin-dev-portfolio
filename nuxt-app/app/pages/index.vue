@@ -25,8 +25,7 @@ const content = {
       eyebrow: 'Computer Science student at DHBW Karlsruhe',
       name: 'VALENTIN SCHECKLEIN',
       role: 'SOFTWARE, DEVOPS AND INFRASTRUCTURE',
-      based: 'Based in Germany',
-      status: 'Finishing my degree in October 2026. Open to software development, DevOps and infrastructure roles.',
+      status: 'Finishing my degree in October 2026. Open to software development, DevOps, infrastructure and related roles.',
       resume: 'Download CV',
       scroll: 'Keep scrolling'
     },
@@ -37,7 +36,7 @@ const content = {
       storyTitle: 'Profile',
       paragraphs: [
         'DHBW Karlsruhe runs a cooperative degree programme, which means I have been working full-time in IT alongside my studies since 2022. By the time I graduate in October 2026 I will have around four years of professional experience.',
-        'My expirience covers backend services, cross-platform apps, CI/CD pipelines and Linux server operations. I have shipped web apps, Android builds and Nuxt SSR deployments through GitHub Actions and GitLab CI. I use AI coding tools from multiple providers daily for writing, reviewing and debugging code.'
+        'My experience covers backend services, cross-platform apps, CI/CD pipelines and Linux server operations. I have shipped web apps, Android builds and Nuxt SSR deployments through GitHub Actions and GitLab CI. I rely on AI coding tools from multiple providers for writing, reviewing and debugging code.'
       ],
       stats: [
         { value: 'DHBW', label: 'Computer Science' },
@@ -78,7 +77,7 @@ const content = {
         },
         {
           title: 'AI tooling',
-          text: 'Daily use of AI coding tools from multiple providers. Codex as the main tool, others chosen depending on the task. Code review, debugging and analysis are where most of the value comes from.',
+          text: 'Routine use of AI coding tools from multiple providers. Codex as the main tool, others chosen depending on the task. Code review, debugging and analysis are where most of the value comes from.',
           tags: ['Codex', 'AI-assisted coding', 'LLM tooling', 'code analysis']
         }
       ]
@@ -129,19 +128,18 @@ const content = {
       eyebrow: 'Informatik-Student an der DHBW Karlsruhe',
       name: 'VALENTIN SCHECKLEIN',
       role: 'SOFTWARE, DEVOPS UND INFRASTRUKTUR',
-      based: 'Aus Deutschland',
-      status: 'Abschluss im Oktober 2026. Offen für Softwareentwicklung, DevOps und Infrastruktur.',
+      status: 'Abschluss im Oktober 2026. Offen für Softwareentwicklung, DevOps, Infrastruktur und verwandte Rollen.',
       resume: 'Lebenslauf laden',
       scroll: 'Weiter scrollen'
     },
     about: {
       heading: 'HALLO, ICH BIN VALENTIN.',
       subheading: 'SOFTWARE, DEVOPS UND INFRASTRUKTUR',
-      location: 'Aus Karlsruhe',
+      location: 'Aus Karlsruhe, Deutschland',
       storyTitle: 'Profil',
       paragraphs: [
-        'Die DHBW Karlsruhe ist eine Duale Hochschule, was bedeutet, dass ich seit 2022 neben meinem Studium durchgehend in einer Unternehmens IT gearbeitet habe. Wenn ich im Oktober 2026 abschließe, bringe ich rund vier Jahre Berufserfahrung mit.',
-        'Mein Erfahrungsbereich umfasst Backend-Services, Cross-Platform-Apps, CI/CD-Pipelines und Linux-basierte Serverinfrastruktur. Ich habe Web-Apps, Android-Builds und Nuxt-SSR-Apps über GitHub Actions und GitLab CI deployed. KI-gestützte Entwicklungstools nutze ich täglich, mit Modellen verschiedener Anbieter je nach Aufgabe.'
+        'Die DHBW Karlsruhe ist eine Duale Hochschule, was bedeutet, dass ich seit 2022 neben meinem Studium durchgehend in einer Unternehmens IT gearbeitet habe. Wenn ich im Oktober 2026 den Abschluss mache, bringe ich rund vier Jahre Berufserfahrung mit.',
+        'Mein Erfahrungsbereich umfasst Backend-Services, Cross-Platform-Apps, CI/CD-Pipelines und Linux-basierte Serverinfrastruktur. Ich habe Web-Apps, Android-Builds und Nuxt-SSR-Apps über GitHub Actions und GitLab CI deployed. KI-gestützte Entwicklungstools setze ich routiniert ein, mit Modellen verschiedener Anbieter je nach Aufgabe.'
       ],
       stats: [
         { value: 'DHBW', label: 'Informatik' },
@@ -182,7 +180,7 @@ const content = {
         },
         {
           title: 'KI-Tools',
-          text: 'Tägliche Nutzung von KI-gestützten Entwicklungstools verschiedener Anbieter. Codex als Haupt-Tool, andere je nach Aufgabe. Code-Reviews, Debugging und Analyse sind die häufigsten Anwendungsfälle.',
+          text: 'Routinierter Umgang mit KI-gestützten Entwicklungstools verschiedener Anbieter. Codex als Haupt-Tool, andere je nach Aufgabe. Code-Reviews, Debugging und Analyse sind die häufigsten Anwendungsfälle.',
           tags: ['Codex', 'KI-gestützte Entwicklung', 'LLM-Tooling', 'Code-Analyse']
         }
       ]
@@ -214,7 +212,7 @@ const content = {
     },
     contact: {
       heading: 'LASS UNS REDEN',
-      text: 'Ich schließe mein Studium im Oktober 2026 ab und suche eine Vollzeitstelle in Softwareentwicklung, DevOps oder Infrastruktur. Wenn mein Profil passt, meld dich.',
+      text: 'Ich mache im Oktober 2026 meinen Abschluss und suche eine Vollzeitstelle in Softwareentwicklung, DevOps oder Infrastruktur. Wenn mein Profil passt, meld dich.',
       email: 'E-Mail',
       github: 'GitHub',
       linkedin: 'LinkedIn'
@@ -441,7 +439,6 @@ useHead(() => ({
       </div>
 
       <div class="hero-meta">
-        <p class="hero-location">{{ t.hero.based }}</p>
         <p class="hero-status">{{ t.hero.status }}</p>
       </div>
 
