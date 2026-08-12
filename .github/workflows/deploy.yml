@@ -91,7 +91,12 @@ jobs:
             RSYNC_OPTS="$RSYNC_OPTS --delete-after"
           fi
 
-          rsync $RSYNC_OPTS -e "ssh -p ${{ secrets.VPS_PORT }}" \
+          # The CV PDFs are published by the separate herzblutnord/valentin-cv repo.
+          # Excluding them also protects them from --delete-after, which would
+          # otherwise wipe them from the server on every deploy.
+          rsync $RSYNC_OPTS \
+            --exclude "/files/valentin-schecklein-*.pdf" \
+            -e "ssh -p ${{ secrets.VPS_PORT }}" \
             ".output/public/" \
             "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/valentins.dev/html/"
 
